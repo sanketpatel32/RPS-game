@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+	background: #89c15e;
+	color: rgb(255, 255, 255);
+	font-family: "Roboto", sans-serif;
+	overflow: hidden;
+}
+
+.container {
+	z-index: -2;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.scorecard {
+	display: flex;
+	border: 2px solid rgb(255, 255, 255);
+	letter-spacing: 1px;
+	min-width: 50%;
+	min-height: 10vh;
+	padding: 2px;
+	margin: 5vh;
+	border-radius: 10px;
+	justify-content: space-between;
+	flex-flow: row;
+}
+
+.GamesName {
+    max-width: 10vh;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 1.5vh;
+    letter-spacing: 0.2em;
+	font-weight: 900;
+}
+
+.cards {
+	display: flex;
+	color: black;
+}
+
+.card {
+	font-size: 1.3rem;
+	background-color: rgb(255, 255, 255);
+	min-width: 13vh;
+	max-width: 15vh;
+	font-family: "Roboto", sans-serif;
+	display: flex;
+	flex-flow: column;
+	font-weight: 700;
+	border-radius: 10%;
+	padding: 9px;
+	margin: 1vh;
+	border-radius: 10px;
+	text-align: center;
+
+}
+
+.Score {
+	font-size: 8vh;
+	font-weight: 900;
+}
+
+.game {
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+}
+
+#bottom {
+	display: contents;
+}
+
+.bottom-up {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.bottom-down {
+	display: flex;
+	justify-content: center;
+}
+
+.circle {
+	display: flex;
+	min-height: 100px;
+	min-width: 100px;
+	border-radius: 50%;
+	border: 15px solid black;
+	margin: 3vh;
+	background: #edd5a7;
+	justify-content: center;
+	align-items: center;
+}
+
+.rock {
+	border-color: #006177;
+	margin-left: 10vh;
+}
+
+.scissor {
+	border-color: #b000a7;
+	margin-right: 10vh;
+}
+
+.paper {
+	border-color: #ed8d2c;
+}
+
+line {
+	display: flex;
+	max-width: 1px;
+	max-height: 1px;
+}
+
+.lineimg {
+	position: absolute;
+}
+
+.rcline {
+	left: 48.6%;
+	top: 48.5%;
+	width: 2.8%;
+	height: 1.3%;
+}
+
+.rpline {
+	left: 45%;
+	top: 58.5%;
+	width: 2.8%;
+}
+
+.psline {
+	left: 52%;
+	top: 58.5%;
+	width: 2.8%;
+}
+
+.circle:hover {
+	cursor: pointer;
+}
+
+.result {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row;
+}
+
+.result-div {
+	display: flex;
+	flex-flow: row;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 50%;
+}
+
+.resultCircle {
+	min-height: 150px;
+	min-width: 150px;
+}
+
+.winner {
+	font-family: "Roboto", sans-serif;
+	display: flex;
+	flex-flow: column;
+	align-self: center;
+	justify-content: space-around;
+	text-align: center;
+	min-height: 20vh;
+	margin-top: 15vh;
+}
+
+.loss-win {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.against {
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 2px;
+}
+
+.button1 {
+	background-color: #ffffff;
+	color: black;
+	padding: 10px 18px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 400;
+	border-radius: 10px;
+}
+
+.button1:hover {
+	cursor: pointer;
+}
+
+.picks {
+	font-family: "Roboto", sans-serif;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-weight: 500;
+}
+
+.picks p {
+	letter-spacing: 2.5px;
+}
+
+.last-circle {
+	z-index: 0;
+	box-shadow: 0 0 0 28px rgb(37, 128, 26), 0 0 0 56px rgba(29, 168, 43, 0.79),
+		0 0 0 84px rgba(46, 154, 37, 0.39);
+}
+
+#final-result {
+	display: none;
+}
+
+.final-result {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-main {
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+}
+
+.rules-tab {
+	display: none;
+	z-index: 0;
+	width: 100%;
+	position: absolute;
+	justify-content: flex-end;
+	right: 3vh;
+	bottom: 13%;
+}
+
+.close {
+	z-index: 1;
+	position: absolute;
+	left: 96%;
+	top: -9%;
+	display: flex;
+	border: 7px solid rgb(255, 255, 255);
+	background-color: #FF0000;
+	min-width: 50px;
+	max-width: 50px;
+	min-height: 50px;
+	max-height: 50px;
+	border-radius: 60%;
+	font-size: 40px;
+	font-weight: 900;
+	font-family: Dangrek;
+	color: #ffffff;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.close:hover {
+	cursor: pointer;
+}
+
+.rules {
+	z-index: -1;
+	border: 7px solid rgb(255, 255, 255);
+	background-color: #004429;
+	min-width: calc(278px *0.9);
+	min-height: calc(325px*0.9);
+	max-width: calc(278px *0.9);
+	max-height: calc(325px*0.9);
+	border-radius: 5%;
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	justify-content: left;
+}
+
+.rules h2 {
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 400;
+	letter-spacing: 1.2px;
+}
+
+.rules li {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-self: center;
+	align-content: center;
+	list-style-type: none;
+	font-size: 14px;
+	margin: 3px 0;
+}
+
+.bullet {
+	margin: 10px;
+	min-width: 10px;
+	max-width: 10px;
+	min-height: 10px;
+	max-height: 10px;
+	background-color: #FFD600;
+}
+
+.footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	right: 1vh;
+}
+
+.button3 {
+	margin: 3vh 1vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border: 2px solid white;
+	border-radius: 10%;
+	height: 40px;
+	width: 80px;
+	letter-spacing: 2.3px;
+	font-weight: 900;
+}
+
+.button3:hover {
+	cursor: pointer;
+}
+
+#next {
+	display: none;
+}
+
+.under {
+	position: absolute;
+	top: 10%;
+}
+
+.over {
+	position: absolute;
+	top: 30%;
+}
+
+.hurray {
+	display: flex;
+	flex-flow: column;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	top: 65%;
+	left: 39%;
+	letter-spacing: 2px;
+}
+
+.hurray h1 {
+	margin: 0;
+	font-size: calc(100% + 3rem);
+}
+
+.hurray h3 {
+	margin: 0;
+	font-size: calc(100% + 1rem);
+}

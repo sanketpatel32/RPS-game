@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="styles.css" />
+   </head>
+   <body>
+      <div id="main">
+         <div class="container">
+            <div class="scorecard">
+               <div class="GamesName">ROCK PAPER SCISSORS</div>
+               <div class="cards">
+                  <div class="card">
+                     <div>Computer <br />Score <br /></div>
+                     <div class="Score" id="pcScore">0</div>
+                  </div>
+                  <div class="card">
+                     <div>Your<br />Score <br /></div>
+                     <div class="Score" id="userScore">0</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="bottom">
+            <div class="game">
+               <div class="bottom-up">
+                  <div class="circle rock" onclick="divhide();playRound('rock');">
+                     <img src="./assests/rock.png" />
+                  </div>
+                  <div
+                     class="circle scissor"
+                     onclick="divhide();playRound('scissors');"
+                     >
+                     <img src="./assests/scissor.png" />
+                  </div>
+               </div>
+               <div class="line">
+                  <img src="assests/line1.png" class="lineimg rcline" />
+                  <img src="assests/line3.png" class="lineimg rpline" />
+                  <img src="assests/line2.png" class="lineimg psline" />
+               </div>
+               <div class="bottom-down">
+                  <div class="circle paper" onclick="divhide(); playRound('paper');">
+                     <img src="./assests/paper.png" />
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="result" id="result">
+            <div class="result-div">
+               <div class="picks user-result">
+                  <p>YOU PICKED</p>
+                  <div class="circle resultCircle" id="userCircle"></div>
+               </div>
+               <div>
+                  <div class="winner">
+                     <div class="loss-win" id="loss-win">YOU WON</div>
+                     <div class="against" id="against">AGAINST PC</div>
+                     <button onclick="divhide2();" class="button1" id="button-result">
+                     PLAY AGAIN
+                     </button>
+                  </div>
+               </div>
+               <div class="picks pc-result">
+                  <p>PC PICKED</p>
+                  <div class="circle resultCircle" id="pcCircle"></div>
+               </div>
+            </div>
+         </div>
+         <div class="footer-main">
+            <div class="rules-tab" id="rules-tab">
+               <div class="rules">
+                  <div class="close" id="close" onclick="divhide5();">X</div>
+                  <h2>GAME RULES</h2>
+                  <li>
+                     <div class="bullet"></div>
+                     Rock beats scissors, scissors beat paper, and paper beats rock.
+                  </li>
+                  <li>
+                     <div class="bullet"></div>
+                     Agree ahead of time whether you’ll count off “rock, paper,
+                     scissors, shoot” or just “rock, paper, scissors.”
+                  </li>
+                  <li>
+                     <div class="bullet"></div>
+                     Use rock, paper, scissors to settle minor decisions or simply play
+                     to pass the time
+                  </li>
+                  <li>
+                     <div class="bullet"></div>
+                     If both players lay down the same hand, each player lays down
+                     another hand
+                  </li>
+               </div>
+            </div>
+            <div class="footer">
+               <div class="button3" id="rules" onclick="divhide5();">RULES</div>
+               <div class="button3" id="next" onclick="divhide4();">NEXT</div>
+            </div>
+         </div>
+      </div>
+      <div id="final-result">
+         <div class="final-result">
+            <img class="under" src="./assests/stars.png" alt="" />
+            <img class="over" src="./assests/Vector.png" alt="" />
+         </div>
+         <div class="hurray">
+            <h1>HURRAY !!!</h1>
+            <h3>YOU WON THE GAME</h3>
+            <button onclick="divhide3();" class="button1">PLAY AGAIN</button>
+         </div>
+      </div>
+      <script src="script.js"></script>
+   </body>
+</html>
